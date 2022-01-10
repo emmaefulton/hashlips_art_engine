@@ -5,9 +5,9 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Your Collection";
-const description = "Remember to replace this description";
-const baseUri = "ipfs://NewUriToReplace";
+const namePrefix = "Lady Docs";
+const description = "Unique, smart, powerful, beautiful women- we look like your doctors";
+const baseUri = "image.png";
 
 const solanaMetadata = {
   symbol: "YC",
@@ -15,7 +15,7 @@ const solanaMetadata = {
   external_url: "https://www.youtube.com/c/hashlipsnft",
   creators: [
     {
-      address: "7fXNuer5sbZtaTEPhtJ5g5gNtuyRoKkvxdjEjEnPN4mC",
+      address: "0xf77C003d90f4843F7F5d532AEa22A3Dfc1ac082B",
       share: 100,
     },
   ],
@@ -24,15 +24,22 @@ const solanaMetadata = {
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5,
+    growEditionSizeTo: 1000,
     layersOrder: [
       { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
+      { name: "Blood" },
+      { name: "Skin" },
+      { name: "Coat" },
+      { name: "Badge" },
+      { name: "Stethescope" },
+      { name: "Nose" },
+      { name: "Eyebrows" },
+      { name: "Eye background" },
       { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "Pupil" },
+      { name: "Lips" },
+      { name: "Accessories" },
+      { name: "Hair" },
     ],
   },
 ];
@@ -42,8 +49,8 @@ const shuffleLayerConfigurations = false;
 const debugLogs = false;
 
 const format = {
-  width: 512,
-  height: 512,
+  width: 1000,
+  height: 1000,
   smoothing: false,
 };
 
@@ -72,7 +79,7 @@ const pixelFormat = {
 };
 
 const background = {
-  generate: true,
+  generate: false,
   brightness: "80%",
   static: false,
   default: "#000000",
